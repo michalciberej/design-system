@@ -1,9 +1,18 @@
+import * as tvcolors from "tailwindcss/colors"
+
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
+      colors: {
+        primaryL: tvcolors.teal[400],
+        secondaryL: tvcolors.teal[100],
+        primaryD: tvcolors.teal[600],
+        secondaryD: tvcolors.teal[800]
+      },
       borderRadius: {
         0: "4px",
         1: "8px",
@@ -16,6 +25,7 @@ export default {
       }
     },
   },
+  darkMode: ['class', '[data-theme="dark"]'],
   plugins: [],
 }
 
