@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Button from ".";
+import { GitHubIcon } from "../Icon";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
@@ -15,14 +16,30 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     children: "Primary",
-    variant: { variant: "primary" },
+    variant: "primary",
   },
 };
 
-export const Secondary: Story = {
+export const WithIconBefore: Story = {
   args: {
-    children: "Secondary",
-    variant: { variant: "secondary" },
+    variant: "primary",
+    children: "Icon Before",
+    iconBefore: <GitHubIcon />,
+  },
+};
+
+export const WithIconAfter: Story = {
+  args: {
+    variant: "primary",
+    children: "Icon After",
+    iconAfter: <GitHubIcon />,
+  },
+};
+
+export const IconButton: Story = {
+  args: {
+    variant: "primary",
+    icon: <GitHubIcon />,
   },
 };
 
