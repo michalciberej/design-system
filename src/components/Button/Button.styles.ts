@@ -1,11 +1,13 @@
 import { tv } from "tailwind-variants";
 
-const styles = tv({
-  base: "rounded-1 border-none bg-red-400 px-[15px] py-[11px]",
+const base = "rounded-1 flex items-center justify-center gap-2 max-w-content";
+
+export const mainStyles = tv({
+  base: `px-[15px] py-[10px] ${base}`,
   variants: {
     variant: {
-      primary: "bg-blue-500",
-      secondary: "bg-red-500",
+      primary: "bg-primaryL dark:bg-primaryD",
+      secondary: "bg-secondaryL dark:bg-secondaryD",
     },
   },
   defaultVariants: {
@@ -13,4 +15,15 @@ const styles = tv({
   },
 });
 
-export default styles;
+export const iconStyles = tv({
+  base: `p-[10px] ${base}`,
+  variants: {
+    variant: {
+      primary: "bg-primaryL dark:bg-primaryD",
+      secondary: "bg-primaryL dark:bg-primaryD",
+    },
+  },
+  defaultVariants: {
+    variant: "primary",
+  },
+});
