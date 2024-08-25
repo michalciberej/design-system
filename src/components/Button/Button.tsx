@@ -3,11 +3,11 @@ import { iconStyles, mainStyles } from "./Button.styles";
 import type { ButtonProps } from "./Button.types";
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
-  const { variant, children, icon, iconBefore, iconAfter, ...rest } = props;
+  const { variant, children, icon, iconBefore, iconAfter, size, ...rest } = props;
 
   if (icon) {
     return (
-      <button ref={ref} className={iconStyles({ variant })} {...rest}>
+      <button ref={ref} className={iconStyles({ size })} {...rest}>
         {icon}
       </button>
     );
