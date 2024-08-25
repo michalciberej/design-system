@@ -1,15 +1,9 @@
-import { VariantProps } from "tailwind-variants";
-import { iconStyles, mainStyles } from "./Button.styles";
-
-export type ButtonVariants = VariantProps<
-  typeof mainStyles | typeof iconStyles
->;
-
-type BaseButtonProps = {
+export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+  variant?: "primary" | "secondary";
+  size?: "small" | "large";
   type?: "button" | "submit" | "reset";
+  disabled?: boolean;
   icon?: React.ReactNode;
   iconBefore?: React.ReactNode;
   iconAfter?: React.ReactNode;
-} & React.HTMLAttributes<HTMLButtonElement>;
-
-export type ButtonProps = BaseButtonProps & ButtonVariants;
+}
