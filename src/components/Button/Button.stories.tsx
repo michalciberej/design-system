@@ -17,6 +17,7 @@ export const Primary: Story = {
   args: {
     children: "Primary",
     variant: "primary",
+    disabled: false,
   },
 };
 
@@ -25,6 +26,7 @@ export const WithIconBefore: Story = {
     variant: "primary",
     children: "Icon Before",
     iconBefore: <GitHubIcon />,
+    disabled: true,
   },
 };
 
@@ -38,8 +40,16 @@ export const WithIconAfter: Story = {
 
 export const IconButton: Story = {
   args: {
-    variant: "primary",
     icon: <GitHubIcon />,
+    disabled: false,
+  },
+};
+
+export const IconButtonDisabled: Story = {
+  args: {
+    size: "small",
+    icon: <GitHubIcon />,
+    disabled: true,
   },
 };
 
